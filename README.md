@@ -32,3 +32,20 @@ Configure those two line in admintools.rb for your needs
 
 	MongoMapper.connection = Mongo::Connection.new('localhost',27017, :pool_size => 5, :timeout => 5)
 	MongoMapper.database = 'admintools'
+
+Line 102 in admintools.rb change username/password for admin
+
+	  username == 'admin' && password == 'secret'
+
+
+Start
+-----
+
+	ruby admintools.rb
+
+Login
+-----
+
+Login to
+	
+	http://localhost:4567	
