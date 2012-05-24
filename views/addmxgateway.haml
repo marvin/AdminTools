@@ -1,0 +1,16 @@
+%h1 Add New MX Gateway
+%form{:action => "/addmxgateway", :method => "post"}
+  %p
+    %label{:for => ""} Hosname (mx01.xecuris.net)
+    %input{:type => "textbox", :name => "hostname", :id => "hostname"}
+    %br/
+    %label{:for => ""} IP (127.0.0.1)
+    %input{:type => "textbox", :name => "ip", :id => "ip"}
+    %br/
+    %label{:for => ""} username (admin)
+    %input{:type => "textbox", :name => "username", :id => "username"}
+    %br/
+    %label{:for => ""} password (passwd)
+    %input{:type => "textbox", :name =>"passwordp", :id => "password"}
+    %br/
+    %input{:type => "submit", :value => "Create!"}

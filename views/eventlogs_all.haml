@@ -1,0 +1,16 @@
+%h1 All #{@logs_count}
+
+%div{:id => "eventlog"}
+  %table
+    %tr
+      %th{ :width => 90} PRI
+      %th{ :width => 750} data
+      %th{ :width => 110} Source
+      %th{ :wdtih => 150} created at
+      - @logs.each do |log|
+        %tr{:onMouseOver => "this.className='over'", :onMouseOut => "this.className=''"}
+          %td= log.facility_name + "." + log.severity_name
+          %td{:style => "text-align:left"}= log.message
+          %td= log.source
+          %td= log.created_at.strftime(fmt='%d.%m.%Y %H:%M:%S')
+

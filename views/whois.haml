@@ -1,0 +1,6 @@
+%h1 Whois
+%form(action='/whois' method='POST')
+  %input(type='text' name='host' value=@host)
+  %input(type='submit')
+- if defined?(@results)
+  %pre= @results

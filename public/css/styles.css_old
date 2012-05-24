@@ -1,0 +1,163 @@
+body {
+   color: #000;
+   font-weight: normal;  
+   font-family: Tahoma; 
+   font-size: 12px; 
+}
+
+#wrapper{  
+    width:960px;  
+    margin:auto;
+}  
+  
+#header{  
+    background-color:#034569;  
+    padding: 10px 10px;
+    color: #fff;
+}  
+  
+#header>h1{  
+    font-size:200%;  
+}  
+  
+h2{  
+    font-size:100%;  
+}  
+
+h3{
+    font-size: 14px;
+    font-weight: bold;
+}
+  
+#content{  
+    padding:10px 15px;  
+    /* background-color: #086CA2; */
+    color: #000;
+    min-height: 450px;
+    margin-top:10px;
+    border: 1px solid #363636;
+}
+
+#content h1 {
+    color: #000;
+    padding: 2px 0 2px 0;
+    font-size: 22px;
+}  
+
+#content h2 {
+    font-size: 15px;
+    margin: 2px 0;
+    color: #000;
+    text-decoration: underline;    
+}
+
+#content p {
+    color: #5E5E5E;
+}
+
+#content label {
+    text-align:right;
+    position: absolute;
+    width: 250px;
+}
+
+#content input,textarea,select {
+   margin-left: 260px;
+   font-family:Arial,sans-serif;
+   color:#0a0a0a;
+   font-size:12px;
+   border: 1px double #AFAFAF;
+   width:260px;
+}
+
+h1{  
+    font-size:150%;  
+}  
+  
+#footer{  
+    clear:both;  
+    background-color:#fff;  
+    font-size:75%;  
+    font-family:sans-serif;  
+    color:#0c0c0c;
+    padding: 10px 2px;
+    text-align: right;  
+}  
+
+ol{  
+    padding-top:20px;  
+    background-color:#034569;  
+    display:inline; 
+}  
+  
+li{  
+    color:#DBDBDB;  
+    text-align:center;  
+    display:inline;  
+    padding:5px 10px 0 10px;  
+    margin-right:2px;  
+    background-color: #235B79;  
+}  
+
+a{  
+    text-decoration:none;  
+}  
+
+table {
+    width: 850px;
+    table-layout:fixed;
+}
+
+table th {
+    background-color: #EDEDED;
+    padding: 4px 5px;
+    font-size: 12px;
+    color: #363636;
+    border: 1px solid #cecece;
+}
+
+table td {
+    padding: 4px 4px;
+    font-size: 12px;
+    border: 1px solid #cecece;
+}
+
+hr {
+  border: 1px solid #DBDBDB;
+  margin: 16px 0;
+}
+
+
+#cleantable table {
+   border-collapse: separate;
+   border-spacing: 0;
+   border: 0;
+}
+
+#cleantable td {
+   border: 0;
+   font-size:12px;
+}
+
+#eventlog table {
+   border-collapse: separate;
+   border-spacing: 0;
+   border: 1px solid #cecece;
+   width: 860px;
+}
+
+#eventlog td {
+   border: 1px solid #cecece;
+   text-align: center;
+   font-size:12px;
+   padding: 2px 2px;
+}
+
+#eventlog tbody {
+   width: 860px;
+}
+
+tr.over {
+	color: black;
+	background-color: #C1E800; 
+}

@@ -1,0 +1,34 @@
+%h1 Add New Switch Configuration
+%form{:action => "/addswitchconfig", :method => "post"}
+  %p
+    %label{:for => ""} VLAN ID (100)
+    %br/
+    %input{:type => "textbox", :name => "vlanid", :id => "vlanid"}
+    %br/
+    %label{:for => ""} VLAN Name (KDN_100)
+    %br/
+    %input{:type => "textbox", :name => "vlanname", :id => "vlanname"}
+    %br/
+    %label{:for => ""} VRID (10)
+    %br/
+    %input{:type => "textbox", :name => "vrid", :id => "vrid"}
+    %br/
+    %label{:for => ""} Network (10.1.1.0)
+    %br/
+    %input{:type => "textbox", :name => "network", :id => "network"}
+    %br/
+    %label{:for => ""} Netmask (24 usw.)
+    %br/
+    %input{:type => "textbox", :name => "netmask", :id => "netmask"}
+    %br/
+    %label{:for => ""} Owner IP (IP das Master Switches für das netz ist automatisch virtuelle master IP)
+    %br/
+    %input{:type => "textbox", :name => "ownerip", :id => "ownerip"}
+    %br/
+    %label{:for => ""} Backup IP (IP das Backup Switches fuer das netz) 
+    %br/
+    %input{:type => "textbox", :name => "backupip", :id => "backupip"}
+    %br/
+
+
+    %input{:type => "submit", :value => "Create!", :class => "button icon add"}

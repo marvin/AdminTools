@@ -1,0 +1,10 @@
+%h1 Add New Relay Server
+%form{:action => "/addrelayserver", :method => "post"}
+  %p
+    %label{:for => ""} Hosname (znk2-exc01.xecuris.local)
+    %input{:type => "textbox", :name => "hostname", :id => "hostname"}
+    %br/
+    %label{:for => ""} IP (127.0.0.1)
+    %input{:type => "textbox", :name => "ip", :id => "ip"}
+    %br/
+    %input{:type => "submit", :value => "Create!"}

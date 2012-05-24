@@ -1,0 +1,87 @@
+%h1 Domainlist
+%table
+  %tr
+    %th{ :width => 400} domain
+    %th{ :width => 100} relayserver
+    %th{ :wdtih => 100} created at
+    %th{ :width => 100} action
+    - @domains.each do |domain|
+      %tr
+        %td= domain.domain
+        %td= domain.relayserver
+        %td= domain.created_at.strftime(fmt='%d.%m.%Y %H:%M')
+        %td
+          %a{:href=>("/deletedomain/#{domain.id}"), :class => "button icon remove"}= "delete"
+
+%br/
+%a{:href => "/adddomain", :class => "button icon add"} Add Domain
+%br/
+%br/
+
+%h1 Actions
+%p
+  Those are the actions you need to update your files after you added new Domains.
+  %br/
+  After you updated your transport/relay_domains you need to run the Postmap
+  %br/
+  and then it is recommended to restart your postfix
+
+%br/
+
+%div{:class => "button-group"}
+  %a{:href => "/updatefiles", :class => "button primary icon fork"}Update Files
+  %a{:href => "#", :class => "button icon log"}Run Postmap
+  %a{:href => "#", :class => "button icon loop"}Restart Postfix
+
+%br/
+%br/
+
+%p
+  == last file update: #{@actionrunfile}
+%br/
+%br/
+
+%h1 Mail Gateways
+%p
+  Here are the servers that are at the front-end and will receive your mail in first place.
+  %br/
+  ie. these are the actual antispam servers and they will relay the mail to your mail/relay servers.
+  %br/
+  We call them mx-gateways (mail exchange gateways)
+%br/
+%table
+  %tr
+    %th{ :width => 300} hostname
+    %th{ :wdtih => 200} IP
+    %th{ :width => 100} action
+    - @mxgateways.each do |mxgw|
+      %tr
+        %td= mxgw.hostname
+        %td= mxgw.ip
+        %td
+          %a{:href=>("/deletemxgateway/#{mxgw.id}"), :class => "button icon remove"}= "delete"
+
+%br/
+%a{:href => "/addmxgateway", :class => "button icon add"} Add MX-Gateway
+%br/
+%br/
+
+%h1 Relay Server 
+%p
+  This is the list of Relay servers where your mails are getting finally delivered too.
+%br/
+%table
+  %tr
+    %th{ :width => 300} hostname
+    %th{ :wdtih => 200} IP
+    %th{ :width => 100} action
+    - @relayservers.each do |relay|
+      %tr
+        %td= relay.hostname
+        %td= relay.ip
+        %td
+          %a{:href=>("/deleterelayserver/#{relay.id}"), :class => "button icon remove"}= "delete"
+
+%br/
+%a{:href => "/addrelayserver", :class => "button icon add"} Add Relay Server
+

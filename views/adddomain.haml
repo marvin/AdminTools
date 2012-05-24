@@ -1,0 +1,17 @@
+%h1 Add New Domain
+%form{:action => "/adddomain", :method => "post"}
+  %p
+    %label{:for => ""} Domainname (test.com)
+    %input{:type => "textbox", :name => "domain", :id => "domain"}
+    %br/
+    %label{:for => ""} Mxgateway
+    %select{:name => "mxgateway_id"}
+      - @mxgateways.each do |mxgateway|
+        %option{:selected => mxgateway.hostname, :value => mxgateway.id} #{mxgateway.hostname}
+    %br/
+    %label{:for => ""} Relayserver
+    %select{:name => "relayserver_id"}
+      - @relayservers.each do |relayserver|
+        %option{:selected => relayserver.hostname, :value => relayserver.id} #{relayserver.hostname}
+    %br/
+    %input{:type => "submit", :value => "Create!", :class => "button icon add"}

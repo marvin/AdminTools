@@ -1,0 +1,17 @@
+%h1 Latest 50 Logs of <a href="/eventlogs/all">#{@logs_count}</a> total
+%h2 #{@logs_10min} in the past 10 minutes
+
+%div{:id => "eventlog"}
+  %table
+    %tr
+      %th{ :width => 90} PRI
+      %th{ :wdtih => 190} Date
+      %th{ :width => 110} Source
+      %th Message
+      - @logs_last50.each do |log|
+        %tr{:onMouseOver => "this.className='over'", :onMouseOut => "this.className=''"}
+          %td= log.facility_name + "." + log.severity_name + "(" + log.severity + ")"
+          %td= log.created_at.strftime(fmt='%d.%m.%Y %H:%M:%S')
+          %td= log.source
+          %td{:style => "text-align:left"}= log.message
+

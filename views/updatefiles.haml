@@ -1,0 +1,9 @@
+%h1 Updating Files
+%p
+  following domains will be written to file:
+  %br/
+  - @domains.each do |domain|
+    = "+ " + domain.domain
+    %br/
+%br/
+%a{:href => "/updatefiles/now"}Write Files

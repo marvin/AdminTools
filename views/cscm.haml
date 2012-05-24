@@ -1,0 +1,29 @@
+%h1 Core Switch Configurations (ZNK2)
+%table
+  %tr
+    %th{ :width => 50} VLANID 
+    %th{ :width => 100} VLANNAME
+    %th{ :width => 50} VRID
+    %th{ :width => 100} Network
+    %th{ :width => 50} Owner IP
+    %th{ :width => 50} Backup IP
+    %th{ :width => 100} master config (znk2-sw01)
+    %th{ :width => 100} slave config (znk2-sw02)
+    %th{ :width => 100} action
+    - @switchconfigs.each do |config|
+      %tr
+        %td= config.vlanid
+        %td= config.vlanname
+        %td= config.vrid
+        %td= config.network + "/" + config.netmask
+        %td= config.ownerip
+        %td= config.backupip
+        %td= config.ownerconfig.gsub("\n","<br />")
+        %td= config.backupconfig.gsub("\n","<br />")
+        %td
+          %a{:href=>("/deleteswitchconfig/#{config.id}"), :class => "button icon remove"}= "delete"
+
+%br/
+%a{:href => "/addswitchconfig", :class => "button icon add"} Add Switch Config
+%br/
+%br/

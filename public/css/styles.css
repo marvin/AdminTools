@@ -1,0 +1,154 @@
+body {
+   color: #000;
+   font-weight: normal;  
+   font-family: arial; 
+   font-size: 12px; 
+}
+
+#wrapper{  
+    width:100%;  
+    margin:auto;
+}  
+
+#header{
+    float: right;
+    padding: 9px 20px 0 0;
+    text-align: right;
+    color: #C1E800;
+}
+  
+h2{  
+    font-size:100%;  
+}  
+
+h3{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#main {
+   padding: 0 50px 0 20px;
+}
+  
+#content{  
+    padding:0px 15px;  
+    color: #000;
+    min-height: 450px;
+    margin-top:10px;
+}
+
+#content h1 {
+    color: #000;
+    padding: 2px 0 25px 0;
+    font-size: 22px;
+}  
+
+#content h2 {
+    font-size: 17px;
+    margin: 2px 0;
+    color: #000;
+}
+
+#content p {
+    color: #5E5E5E;
+}
+
+#content label {
+}
+
+#content input[type=textbox],textarea {
+   padding: 2px 0;
+   font-family:Arial,sans-serif;
+   color:#0a0a0a;
+   font-size:12px;
+   border: 1px double #AFAFAF;
+   width: 250px;
+   margin: 5px 0 5px 5px;
+}
+
+h1{  
+    font-size:150%;  
+}  
+  
+#footer{  
+    clear:both;  
+    font-size:75%;  
+    font-family:sans-serif;  
+    color:#0c0c0c;
+    padding: 10px 2px;
+    text-align: right;  
+}  
+
+ol{  
+    padding: 7px 0 7px 14px;  
+    background-color: #404040;
+    display:block; 
+    font-size: 14px;
+}  
+  
+li{  
+    color:#DBDBDB;  
+    text-align:center;  
+    display:inline;  
+    padding:5px 10px 0 10px;  
+    margin-right:2px; 
+}  
+
+ol a:hover {
+    color: #C1E800;
+}
+
+a{  
+    text-decoration:none;  
+    color: #C1E800;
+}  
+
+table {
+    width: 100%;
+}
+
+table th {
+    background-color: #EDEDED;
+    padding: 4px 5px;
+    font-size: 12px;
+    color: #363636;
+    border: 1px solid #cecece;
+    font-weight: bold;
+}
+
+table td {
+    padding: 7px 7px;
+    font-size: 12px;
+    border: 1px solid #cecece;
+}
+
+hr {
+  border: 1px solid #DBDBDB;
+  margin: 16px 0;
+}
+
+
+#eventlog table {
+   border-collapse: separate;
+   border-spacing: 0;
+   border: 1px solid #cecece;
+   width: 95%;
+}
+
+#eventlog td {
+   border: 1px solid #cecece;
+   text-align: center;
+   font-size:11px;
+   padding: 3px 2px;
+}
+
+#eventlog tbody {
+   width: 860px;
+}
+
+tr.over {
+        color: black;
+        background-color: #C1E800;
+}
+
+

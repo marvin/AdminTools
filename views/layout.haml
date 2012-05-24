@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %title AdminTools
+    %link(rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css")  
+    %link(rel="stylesheet" href="/css/styles.css")  
+    %link(rel="stylesheet" href="/css/gh-buttons.css")
+  %body
+    #wrapper  
+      #header  
+        %h1 >AdminTools
+        %h2 for your daily administration
+
+      #nav  
+        %ol  
+          %a(href="/")  
+            %li Home 
+          %a(href="/mxtools")
+            %li MXtools
+          %a(href="/cscm")
+            %li CSCM
+          %a(href="/whois")
+            %li Whois
+          %a(href="/eventlogs")
+            %li Logger
+          %a(href="/help")
+            %li Help
+          %a(href="/about")  
+            %li About  
+  
+      #content  
+        = yield
+
+      #footer  
+        %p  
+          == (david noelte - dnoelte@gmail.com) - 2011 - version #{settings.version}
