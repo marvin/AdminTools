@@ -2,6 +2,7 @@ Admin Tools
 ===========
 
 AdminTools where build to make my day more easy.
+logserver.rb is the syslog server.
 
 TODO
 ----
@@ -9,7 +10,6 @@ TODO
 * finish documentation
 * finish file transfer to mx and relay servers
 * include some other tools I was thinking of
-* include the syslog server which isnt part of the frontend atm
 
 Installation
 -----------
